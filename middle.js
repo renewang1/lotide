@@ -42,3 +42,5 @@ assertArraysEqual(middle(testArray3), [], true); //Should PASS
 const testArray4 = [1];
 assertArraysEqual(middle(testArray4), [], true); //Should PASS
 
+const testArray5 = [];
+assertArraysEqual(middle(testArray5), [], true); //Should PASS
