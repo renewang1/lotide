@@ -30,3 +30,7 @@ const map = function(array, callback) {
 
 const results1 = map(words, word => word[0]);
 console.log(results1);
+
+const array1 = ['hello', 'hi', 'hey'];
+const results2 = map(array1, word => word + ' there');
+assertArraysEqual(results2, ['hello there', 'hi there', 'hey there']);
