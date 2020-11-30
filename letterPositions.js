@@ -30,7 +30,7 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-module.exports(letterPositions);
+module.exports = letterPositions;
 
 const sentence = 'good morning';
 const result1 = letterPositions(sentence); //
