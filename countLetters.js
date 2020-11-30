@@ -18,6 +18,8 @@ const countLetters = function(sentence) {
   return count;
 };
 
+module.exports(countLetters);
+
 
 const test1 = 'hello world';
 const result1 = countLetters(test1); //{h: 1, e: 1, l: 3, o: 2, w: 1, r: 1, d: 1};

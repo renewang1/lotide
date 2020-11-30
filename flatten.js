@@ -30,6 +30,8 @@ const flatten = function(array) {
   return newArray;
 };
 
+module.exports(flatten);
+
 console.log(flatten([1, 2, [1, 2, 3]]));
 
 const testArray = [1, 2, [1, 2, 3]];

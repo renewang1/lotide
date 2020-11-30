@@ -30,6 +30,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
+module.exports(letterPositions);
+
 const sentence = 'good morning';
 const result1 = letterPositions(sentence); //
 assertArraysEqual(result1['g'], [0, 11], true);
