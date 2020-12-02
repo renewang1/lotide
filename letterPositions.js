@@ -11,3 +11,5 @@ const letterPositions = function(sentence) {
   delete results[' '];
   return results;
 };
+
+module.exports = letterPositions;
