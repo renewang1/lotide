@@ -1,15 +1,24 @@
+const { expect } = require('chai');
+const without = require('../without');
 
-console.log(without([1, 2, 3], [1])) // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])) // => ["1", "2"]
+describe('#without', () => {
 
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+  it("should return [2, 3] given [1, 2, 3] and [1] as arguments", () => {
+    expect(without([1, 2, 3], [1])).to.deep.equal([2, 3]);
+  });
 
-testArray = [1, 2, 3];
-without(testArray, [1, 2]);
-assertArraysEqual(testArray, [1, 2, 3]); // Should PASS
+  it("should return ['1', '2'] given ['1', '2', '3'] and [1, 2, '3'] as arguments", () => {
+    expect(without(['1', '2', '3'], [1, 2, '3'])).to.deep.equal(['1', '2']);
+  });
 
-assertArraysEqual(without([1, 2, 3], []), [1, 2, 3]); // Should PASS
-assertArraysEqual(without([], [1, 2, 3]), []); // Should PASS
+  it("should not alter original array", () => {
+    const words = ["hello", "world", "lighthouse"];
+    without(words, ["lighthouse"]);
+    expect(words).to.deep.equal(["hello", "world", "lighthouse"]);
+  });
+
+  it("should return an empty array if empty array is passed", () => {
+    expect(without([], [1, 2, 3])).to.deep.equal([]);
+  });
+
+});
