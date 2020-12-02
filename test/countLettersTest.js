@@ -11,7 +11,7 @@ describe('#countLetters', () => {
   it("should return undefined for a character not in string", () => {
     const test = 'hello world';
     try {
-      countLetters(test)['p']
+      countLetters(test)['p'];
     } catch (err) {
       assert.equal((err.message), undefined);
     }

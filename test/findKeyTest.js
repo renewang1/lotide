@@ -22,8 +22,8 @@ describe('#findKey', () => {
   });
 
   it("should return undefined if no key:value fits criteria", () => {
-    try{
-      const result = findKey(test, x => x.stars === 0);
+    try {
+      findKey(test, x => x.stars === 0);
     } catch (err) {
       expect(err.message).to.equal(undefined);
     }

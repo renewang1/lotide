@@ -13,12 +13,12 @@ describe('#map', () => {
     const array2 = [1, 2, 3];
     const results2 = map(array2, num => num * 2);
     expect(results2).to.deep.equal([2, 4, 6]);
-  })
+  });
 
   it("should return empty array no matter what function it takes", () => {
     const array3 = [];
     const results3 = map(array3, word => word[0]);
     expect(results3).to.deep.equal([]);
-  })
+  });
 
 });

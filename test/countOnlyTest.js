@@ -1,4 +1,3 @@
-const assert = require('chai').assert;
 const { expect } = require('chai');
 const countOnly = require('../countOnly');
 
@@ -14,7 +13,7 @@ describe('#countOnly', () => {
     "Fang",
     "Joe"
   ];
-  const result = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false })
+  const result = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
   it("should return 1 with an array with one instance of name", () => {
     expect(result['Jason']).to.equal(1);
@@ -25,7 +24,7 @@ describe('#countOnly', () => {
   });
 
   it("should return undefined with an array with no instances of name but called", () => {
-    try{
+    try {
       result['Karima'];
     } catch (err) {
       expect(err.message).to.equal(undefined);
@@ -33,13 +32,13 @@ describe('#countOnly', () => {
   });
 
   it("should return undefined with an array with one instance of name but not called", () => {
-    try{
+    try {
       result['Aghouhanna'];
     } catch (err) {
       expect(err.message).to.equal(undefined);
     }
   });
-})
+});
 
 // const firstNames = [
 //   "Karl",

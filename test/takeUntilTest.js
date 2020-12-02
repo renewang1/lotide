@@ -13,11 +13,11 @@ describe('#takeUntil', () => {
     const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
     const results2 = takeUntil(data2, x => x === ',');
     expect(results2).to.deep.equal(["I've", "been", "to", "Hollywood"]);
-  })
+  });
 
   it("should return an empty array no matter what callback function is passed", () => {
     const data3 = [];
     const results3 = takeUntil(data3, x => x[0]);
     expect(results3).to.deep.equal([]);
-  })
+  });
 });

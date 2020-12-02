@@ -13,7 +13,7 @@ describe('#findKeyByValue', () => {
   });
 
   it("should return undefined for value not in the object", () => {
-    try{
+    try {
       findKeyByValue(bestTVShowsByGenre, "That '70s Show");
     } catch (err) {
       expect(err.message).to.equal(undefined);

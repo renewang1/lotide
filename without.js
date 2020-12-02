@@ -1,5 +1,5 @@
 const without = function(source, itemsToRemove) {
-  newArray = [];
+  let newArray = [];
   for (let value of source) {
     if (!itemsToRemove.includes(value)) {
       newArray.push(value);
